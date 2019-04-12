@@ -18,7 +18,8 @@ import java.util.List;
 public class MyMojo extends AbstractMojo {
 
     public void execute() throws MojoExecutionException {
-        String keyFile = "testingCertificatesLast.key";
+
+        String keyFile = "PrivateKey/testingCertificatesLast.key";
         String dataFile = "2pac-tupac-shakur-png-5a3a490a5f3ac0.52388394151376922639011210.jpg";
         String signFile = "semnatura";
 
