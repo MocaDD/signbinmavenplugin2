@@ -24,7 +24,7 @@ public class MyMojo extends AbstractMojo {
         int i = 1;
         while (i < 5000) {
             try {
-                File folder = new File("binary_file_" + "i");
+                File folder = new File("binary_file_" + Integer.toString(i));
                 i++;
             }   catch(NullPointerException e)  {
                 --i;
