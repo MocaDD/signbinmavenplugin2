@@ -20,6 +20,8 @@ public class MyMojo extends AbstractMojo {
     public void execute() throws MojoExecutionException {
 
         String dataFile = "";
+        String keyFile = "";
+        String signFile = "";
         File folder = null;
 
         int i = 1;
@@ -31,11 +33,11 @@ public class MyMojo extends AbstractMojo {
             --i;
             c = i;
             dataFile = "binary_file_" + Integer.toString(c);
+            keyFile = "PrivateKey/PrivateKey_" + Integer.toString(c) + ".key";
+            signFile = "Semnatura_" + Integer.toString(c);
             break;
         }
 
-        String keyFile = "PrivateKey/PrivateKey_" + Integer.toString(c) + ".key";
-        String signFile = "Semnatura_" + Integer.toString(c);
 
         List<String> lines = null;
         try {
