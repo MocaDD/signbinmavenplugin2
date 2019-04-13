@@ -42,7 +42,7 @@ public class MyMojo extends AbstractMojo {
                 }
         }
 
-        keyFile = "PrivateKey_1" + ".key";
+        keyFile = "PrivateKey/PrivateKey_1" + ".key";
 
         List<String> lines = null;
         try {
