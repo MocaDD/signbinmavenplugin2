@@ -21,23 +21,28 @@ public class MyMojo extends AbstractMojo {
 
         String dataFile = "";
         String keyFile = "";
-        String signFile = "";
+        String signFile = "semnatura";
+
         File folder = null;
 
-        int i = 1;
-        int c = 0;
-        while (i < 5000) try {
-            folder = new File("binary_file_" + Integer.toString(i));
-            i++;
-        } catch (NullPointerException e) {
-            --i;
-            c = i;
-            dataFile = "binary_file_" + Integer.toString(c);
-            keyFile = "PrivateKey/PrivateKey_" + Integer.toString(c) + ".key";
-            signFile = "Semnatura_" + Integer.toString(c);
-            break;
+        try {
+                folder = new File("binary_file" + ".jpg");
+                dataFile = "binary_file" + ".jpg" ;
+            } catch (Exception e) {
+                try {
+                    folder = new File("binary_file" + ".txt");
+                    dataFile = "binary_file" + ".txt" ;
+                } catch (Exception e2)   {
+                    try {
+                        folder = new File("binary_file" + ".docx");
+                        dataFile = "binary_file" + ".docx" ;
+                    }  finally {
+                        dataFile = "";
+                    }
+                }
         }
 
+        keyFile = "PrivateKey_1" + ".key";
 
         List<String> lines = null;
         try {
