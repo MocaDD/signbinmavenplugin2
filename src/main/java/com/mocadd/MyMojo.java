@@ -28,13 +28,13 @@ public class MyMojo extends AbstractMojo {
                 i++;
             }   catch(NullPointerException e)  {
                 --i;
-                dataFile = "binary_file_" + "i";
+                dataFile = "binary_file_" + Integer.toString(i);
                 break;
             }
         }
 
-        String keyFile = "PrivateKey/PrivateKey_" + "i" + ".key";
-        String signFile = "Semnatura" + "i";
+        String keyFile = "PrivateKey/PrivateKey_" + Integer.toString(i) + ".key";
+        String signFile = "Semnatura_" + Integer.toString(i);
 
         List<String> lines = null;
         try {
