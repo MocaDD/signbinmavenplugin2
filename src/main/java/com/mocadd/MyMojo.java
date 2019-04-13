@@ -19,9 +19,22 @@ public class MyMojo extends AbstractMojo {
 
     public void execute() throws MojoExecutionException {
 
-        String keyFile = "PrivateKey/testingCertificatesLast.key";
-        String dataFile = "2pac-tupac-shakur-png-5a3a490a5f3ac0.52388394151376922639011210.jpg";
-        String signFile = "semnatura";
+        String dataFile = "";
+
+        int i = 1;
+        while (i < 5000) {
+            try {
+                File folder = new File("binary_file_" + "i");
+                i++;
+            }   catch(NullPointerException e)  {
+                --i;
+                dataFile = "binary_file_" + "i";
+                break;
+            }
+        }
+
+        String keyFile = "PrivateKey/PrivateKey_" + "i" + ".key";
+        String signFile = "Semnatura" + "i";
 
         List<String> lines = null;
         try {
