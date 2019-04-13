@@ -20,19 +20,18 @@ public class MyMojo extends AbstractMojo {
     public void execute() throws MojoExecutionException {
 
         String dataFile = "";
+        File folder = null;
 
         int i = 1;
         int c = 0;
-        while (i < 5000) {
-            try {
-                File folder = new File("binary_file_" + Integer.toString(i));
-                i++;
-            }   catch(NullPointerException e)  {
-                --i;
-                c = i;
-                dataFile = "binary_file_" + Integer.toString(c);
-                break;
-            }
+        while (i < 5000) try {
+            folder = new File("binary_file_" + Integer.toString(i));
+            i++;
+        } catch (NullPointerException e) {
+            --i;
+            c = i;
+            dataFile = "binary_file_" + Integer.toString(c);
+            break;
         }
 
         String keyFile = "PrivateKey/PrivateKey_" + Integer.toString(c) + ".key";
