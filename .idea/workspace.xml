@@ -32,8 +32,8 @@
       <file leaf-file-name="MyMojo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mocadd/MyMojo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="39" column="13" lean-forward="true" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+            <state relative-caret-position="362">
+              <caret line="38" column="59" lean-forward="false" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -325,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555155055960</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Different Binaries3">
+      <created>1555155288399</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1555155288399</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -366,7 +373,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="path" />
     <MESSAGE value="Different Binaries" />
-    <option name="LAST_COMMIT_MESSAGE" value="Different Binaries" />
+    <MESSAGE value="Different Binaries3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Different Binaries3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -409,8 +417,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mocadd/MyMojo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="39" column="13" lean-forward="true" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+        <state relative-caret-position="362">
+          <caret line="38" column="59" lean-forward="false" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
