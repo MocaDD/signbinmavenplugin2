@@ -27,15 +27,15 @@ public class MyMojo extends AbstractMojo {
 
         try {
                 folder = new File("binary_file" + ".jpg");
-                dataFile = "binary_file" + ".jpg" ;
+                dataFile = "BinaryFiles/binary_file" + ".jpg" ;
             } catch (Exception e) {
                 try {
                     folder = new File("binary_file" + ".txt");
-                    dataFile = "binary_file" + ".txt" ;
+                    dataFile = "BinaryFiles/binary_file" + ".txt" ;
                 } catch (Exception e2)   {
                     try {
                         folder = new File("binary_file" + ".docx");
-                        dataFile = "binary_file" + ".docx" ;
+                        dataFile = "BinaryFiles/binary_file" + ".docx" ;
                     }  finally {
                         dataFile = "";
                     }
