@@ -27,7 +27,7 @@ public class MyMojo extends AbstractMojo {
 
         File path = new File("BinaryFiles/");
         File[] files = path.listFiles();
-        dataFile = files[0].getAbsolutePath();
+        dataFile = files[1].getAbsolutePath();
 
 
         /*
@@ -51,7 +51,7 @@ public class MyMojo extends AbstractMojo {
 
         path = new File("PrivateKey/");
         files = path.listFiles();
-        keyFile = files[0].getAbsolutePath();
+        keyFile = files[1].getAbsolutePath();
 
         //keyFile = "PrivateKey/PrivateKey_1" + ".key";
 
