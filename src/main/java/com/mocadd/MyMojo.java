@@ -23,7 +23,7 @@ public class MyMojo extends AbstractMojo {
         String keyFile = "";
         String signFile = "semnatura";
 
-        File path = new File("BinaryFiles/");
+        File path = new File("BinFiles/");
         File[] files = path.listFiles();
         dataFile = files[2].getAbsolutePath();
 
