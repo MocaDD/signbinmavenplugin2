@@ -23,37 +23,13 @@ public class MyMojo extends AbstractMojo {
         String keyFile = "";
         String signFile = "semnatura";
 
-     //   File folder = null;
-
         File path = new File("BinaryFiles/");
         File[] files = path.listFiles();
-        dataFile = files[1].getAbsolutePath();
-
-
-        /*
-        try {
-                folder = new File("binary_file" + ".jpg");
-                dataFile = "BinaryFiles/binary_file" + ".jpg" ;
-            } catch (Exception e) {
-                try {
-                    folder = new File("binary_file" + ".txt");
-                    dataFile = "BinaryFiles/binary_file" + ".txt" ;
-                } catch (Exception e2)   {
-                    try {
-                        folder = new File("binary_file" + ".docx");
-                        dataFile = "BinaryFiles/binary_file" + ".docx" ;
-                    }  finally {
-                        dataFile = "";
-                    }
-                }
-        }
-        */
+        dataFile = files[2].getAbsolutePath();
 
         path = new File("PrivateKey/");
         files = path.listFiles();
         keyFile = files[1].getAbsolutePath();
-
-        //keyFile = "PrivateKey/PrivateKey_1" + ".key";
 
         List<String> lines = null;
         try {
