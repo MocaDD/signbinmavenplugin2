@@ -29,7 +29,10 @@ public class MyMojo extends AbstractMojo {
 
         path = new File("PrivateKey/");
         files = path.listFiles();
-        keyFile = files[1].getAbsolutePath();
+
+        int x = (int)((Math.random() * ((10 - 1) + 1)) + 1); // Random numbers for keys
+
+        keyFile = files[x].getAbsolutePath();
 
         List<String> lines = null;
         try {
@@ -96,6 +99,7 @@ public class MyMojo extends AbstractMojo {
             out = new FileOutputStream(signFile);
             byte[] signature = sign.sign();
             out.write(signature);
+            out.write(x);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
