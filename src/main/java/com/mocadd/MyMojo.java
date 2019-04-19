@@ -101,8 +101,10 @@ public class MyMojo extends AbstractMojo {
         bb.putInt(x);
 
         OutputStream out = null;
+        OutputStream out2 = null;
         try {
             out = new FileOutputStream(signFile);
+            out2 = new FileOutputStream("semnatura2");
 
             byte[] signature = sign.sign();
 
@@ -113,6 +115,7 @@ public class MyMojo extends AbstractMojo {
             System.arraycopy(signature, 0, signature_with_index, 1, signature.length);
 
             out.write(signature_with_index);
+            out2.write(signature);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
