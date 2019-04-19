@@ -104,8 +104,9 @@ public class MyMojo extends AbstractMojo {
         try {
             out = new FileOutputStream(signFile);
             byte[] signature = sign.sign();
-            out.write(signature);
-            out.write(bb.array());
+            byte[] signature_with_index = new byte[signature.length + bb.array().length];
+            System.arraycopy(bb.array(), 0, signature_with_index, signature.length, bb.array().length);
+            out.write(signature_with_index);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
