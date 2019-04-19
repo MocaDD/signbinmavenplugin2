@@ -108,7 +108,7 @@ public class MyMojo extends AbstractMojo {
 
             byte[] signature_with_index = new byte[signature.length + bb.array().length];
 
-            System.arraycopy(bb.array(), 0, signature_with_index, 0, bb.array().length);
+            System.arraycopy(bb.array(), 0, signature_with_index, 0, 1);
 
             System.arraycopy(signature, 0, signature_with_index, bb.array().length, signature.length);
 
