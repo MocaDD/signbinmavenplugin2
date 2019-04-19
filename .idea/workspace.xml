@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86b47fa0-7ca9-4966-823b-fd776c75d041" name="Default" comment="Different Binaries6">
+    <list default="true" id="86b47fa0-7ca9-4966-823b-fd776c75d041" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mocadd/MyMojo.java" afterPath="$PROJECT_DIR$/src/main/java/com/mocadd/MyMojo.java" />
     </list>
@@ -32,8 +32,8 @@
       <file leaf-file-name="MyMojo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mocadd/MyMojo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="27" column="46" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="46" />
+            <state relative-caret-position="260">
+              <caret line="97" column="8" lean-forward="false" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -402,7 +402,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555358060822</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Multiple Keys">
+      <created>1555678897840</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1555678897840</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -446,7 +453,8 @@
     <MESSAGE value="Different Binaries3" />
     <MESSAGE value="Different Binaries4" />
     <MESSAGE value="Different Binaries6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Different Binaries6" />
+    <MESSAGE value="Multiple Keys" />
+    <option name="LAST_COMMIT_MESSAGE" value="Multiple Keys" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -560,8 +568,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mocadd/MyMojo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="27" column="46" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="46" />
+        <state relative-caret-position="260">
+          <caret line="97" column="8" lean-forward="false" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
