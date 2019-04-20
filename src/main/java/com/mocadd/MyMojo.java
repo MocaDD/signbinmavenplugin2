@@ -30,7 +30,7 @@ public class MyMojo extends AbstractMojo {
         path = new File("PrivateKey/");
         files = path.listFiles();
 
-        int x = (int)((Math.random() * ((10 - 1) + 1)) + 1); // Random numbers for keys
+        int x = (int)((Math.random() * ((9 - 1) + 1)) + 1); // Random numbers for keys
 
         keyFile = files[x].getAbsolutePath();
 
