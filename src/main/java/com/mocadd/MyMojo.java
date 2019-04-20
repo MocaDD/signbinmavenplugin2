@@ -27,14 +27,12 @@ public class MyMojo extends AbstractMojo {
         File[] files = path.listFiles();
         dataFile = files[2].getAbsolutePath();
 
-      //  System.out.println(dataFile);
+        path = new File("PrivateKey/");
+        files = path.listFiles();
 
-      //  path = new File("PrivateKey/");
-     //   files = path.listFiles();
+        int x = (int)((Math.random() * ((10 - 1) + 1)) + 1); // Random numbers for keys
 
-      //  int x = (int)((Math.random() * ((10 - 1) + 1)) + 1); // Random numbers for keys
-
-    //    keyFile = files[1].getAbsolutePath();
+        keyFile = files[1].getAbsolutePath();
 
         List<String> lines = null;
         try {
@@ -97,13 +95,13 @@ public class MyMojo extends AbstractMojo {
         }
 
 
-     //   byte b1 = (byte)x;
+        byte b1 = (byte)x;
         //final ByteBuffer bb = ByteBuffer.allocate(Integer.SIZE / Byte.SIZE);
         //bb.order(ByteOrder.LITTLE_ENDIAN);
         //bb.putInt(x);
 
-     //   byte[] arr = new byte[1];
-     //   arr[0] = b1;
+        byte[] arr = new byte[1];
+        arr[0] = b1;
 
         OutputStream out = null;
         try {
@@ -112,14 +110,14 @@ public class MyMojo extends AbstractMojo {
 
             byte[] signature = sign.sign();
 
-         //   byte[] signature_with_index = new byte[signature.length + 1];
+            byte[] signature_with_index = new byte[signature.length + 1];
 
-        //    System.arraycopy(signature, 0, signature_with_index, 0, signature.length);
+            System.arraycopy(signature, 0, signature_with_index, 0, signature.length);
 
-         //   System.arraycopy(arr, 0, signature_with_index, signature.length, 1);
+            System.arraycopy(arr, 0, signature_with_index, signature.length, 1);
 
 
-            out.write(signature);
+            out.write(signature_with_index);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
