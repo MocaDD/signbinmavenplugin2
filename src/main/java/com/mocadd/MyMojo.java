@@ -27,6 +27,8 @@ public class MyMojo extends AbstractMojo {
         File[] files = path.listFiles();
         dataFile = files[2].getAbsolutePath();
 
+        System.out.println(dataFile);
+
       //  path = new File("PrivateKey/");
      //   files = path.listFiles();
 
