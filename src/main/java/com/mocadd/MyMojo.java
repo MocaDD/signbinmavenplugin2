@@ -19,13 +19,13 @@ public class MyMojo extends AbstractMojo {
 
     public void execute() throws MojoExecutionException {
 
-        String dataFile = "BinFiles/binary_file_3.docx";
+        String dataFile = "";
         String keyFile = "PrivateKey/PrivateKey_1.key";
         String signFile = "semnatura";
 
-      //  File path = new File("BinFiles/");
-      //  File[] files = path.listFiles();
-      //  dataFile = files[2].getAbsolutePath();
+        File path = new File("BinFiles/");
+        File[] files = path.listFiles();
+        dataFile = files[2].getAbsolutePath();
 
       //  path = new File("PrivateKey/");
      //   files = path.listFiles();
