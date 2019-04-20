@@ -19,20 +19,20 @@ public class MyMojo extends AbstractMojo {
 
     public void execute() throws MojoExecutionException {
 
-        String dataFile = "";
-        String keyFile = "";
+        String dataFile = "BinFiles/binary_file_3.docx";
+        String keyFile = "PrivateKey/PrivateKey_1.key";
         String signFile = "semnatura";
 
-        File path = new File("BinFiles/");
-        File[] files = path.listFiles();
-        dataFile = files[2].getAbsolutePath();
+      //  File path = new File("BinFiles/");
+      //  File[] files = path.listFiles();
+      //  dataFile = files[2].getAbsolutePath();
 
-        path = new File("PrivateKey/");
-        files = path.listFiles();
+      //  path = new File("PrivateKey/");
+     //   files = path.listFiles();
 
-        int x = (int)((Math.random() * ((10 - 1) + 1)) + 1); // Random numbers for keys
+      //  int x = (int)((Math.random() * ((10 - 1) + 1)) + 1); // Random numbers for keys
 
-        keyFile = files[1].getAbsolutePath();
+    //    keyFile = files[1].getAbsolutePath();
 
         List<String> lines = null;
         try {
@@ -106,15 +106,16 @@ public class MyMojo extends AbstractMojo {
         OutputStream out = null;
         try {
 
+            out = new FileOutputStream(signFile);
+
             byte[] signature = sign.sign();
 
-            byte[] signature_with_index = new byte[signature.length + 1];
+         //   byte[] signature_with_index = new byte[signature.length + 1];
 
-            System.arraycopy(signature, 0, signature_with_index, 0, signature.length);
+        //    System.arraycopy(signature, 0, signature_with_index, 0, signature.length);
 
          //   System.arraycopy(arr, 0, signature_with_index, signature.length, 1);
 
-            out = new FileOutputStream(signFile);
 
             out.write(signature);
         } catch (FileNotFoundException e) {
