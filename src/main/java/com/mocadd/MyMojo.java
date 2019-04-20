@@ -5,8 +5,6 @@ import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.Mojo;
 
 import java.io.*;
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -96,9 +94,14 @@ public class MyMojo extends AbstractMojo {
             }
         }
 
-        final ByteBuffer bb = ByteBuffer.allocate(Integer.SIZE / Byte.SIZE);
-        bb.order(ByteOrder.LITTLE_ENDIAN);
-        bb.putInt(x);
+
+        byte b1 = (byte)x;
+        //final ByteBuffer bb = ByteBuffer.allocate(Integer.SIZE / Byte.SIZE);
+        //bb.order(ByteOrder.LITTLE_ENDIAN);
+        //bb.putInt(x);
+
+        byte[] arr = new byte[1];
+        arr[0] = b1;
 
         OutputStream out = null;
         try {
@@ -107,10 +110,9 @@ public class MyMojo extends AbstractMojo {
 
             byte[] signature_with_index = new byte[signature.length + 1];
 
-
             System.arraycopy(signature, 0, signature_with_index, 0, signature.length);
 
-            System.arraycopy(bb.array(), 0, signature_with_index, signature.length, 1);
+            System.arraycopy(arr, 0, signature_with_index, signature.length, 1);
 
             out = new FileOutputStream(signFile);
 
