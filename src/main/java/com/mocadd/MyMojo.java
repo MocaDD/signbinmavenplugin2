@@ -20,7 +20,7 @@ public class MyMojo extends AbstractMojo {
     public void execute() throws MojoExecutionException {
 
         String dataFile = "";
-        String keyFile = "PrivateKey/PrivateKey_1.key";
+        String keyFile = "";
         String signFile = "semnatura";
 
         File path = new File("BinFiles/");
@@ -96,9 +96,6 @@ public class MyMojo extends AbstractMojo {
 
 
         byte b1 = (byte)x;
-        //final ByteBuffer bb = ByteBuffer.allocate(Integer.SIZE / Byte.SIZE);
-        //bb.order(ByteOrder.LITTLE_ENDIAN);
-        //bb.putInt(x);
 
         byte[] arr = new byte[1];
         arr[0] = b1;
